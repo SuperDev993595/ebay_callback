@@ -3,7 +3,6 @@ import './App.css'
 
 function App() {
   const [redirectUrl, setRedirectUrl] = useState<string>('')
-  const [isRedirecting, setIsRedirecting] = useState(false)
   const [hasParams, setHasParams] = useState(false)
 
   useEffect(() => {
@@ -22,7 +21,6 @@ function App() {
       
       // Automatically redirect after a short delay
       setTimeout(() => {
-        setIsRedirecting(true)
         window.location.href = fullRedirectUrl
       }, 500) // 0.5 second delay to show the redirect message
     } else {
