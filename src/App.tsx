@@ -11,7 +11,7 @@ function App() {
     const paramString = urlParams.toString()
     
     // Build the eBay callback URL with parameters
-    const ebayCallbackUrl = import.meta.env.VITE_EBAY_CALLBACK_URL || 'https://92.63.225.103:3000/auth/ebay/callback'
+    const ebayCallbackUrl = import.meta.env.VITE_EBAY_CALLBACK_URL || 'http://ebay-chatbot.gcdjapancoltd.com/auth/ebay/callback'
     
     if (paramString) {
       // If parameters exist, automatically redirect
@@ -37,7 +37,7 @@ function App() {
       state: 'test_state',
       scope: 'read_user'
     })
-    const ebayCallbackUrl = import.meta.env.VITE_EBAY_CALLBACK_URL || 'https://92.63.225.103:3000/auth/ebay/callback'
+    const ebayCallbackUrl = import.meta.env.VITE_EBAY_CALLBACK_URL || 'http://ebay-chatbot.gcdjapancoltd.com/auth/ebay/callback'
     const testUrl = `${ebayCallbackUrl}?${testParams.toString()}`
     window.location.href = testUrl
   }
@@ -83,7 +83,7 @@ function App() {
         <h3>How it works:</h3>
         <ul>
           <li>When you visit this page with parameters: <code>?param1=value1&param2=value2</code></li>
-          <li>It will automatically redirect to: <code>https://92.63.225.103:3000/auth/ebay/callback?param1=value1&param2=value2</code></li>
+          <li>It will automatically redirect to: <code>http://ebay-chatbot.gcdjapancoltd.com/auth/ebay/callback?param1=value1&param2=value2</code></li>
           <li>If no parameters are present, this interface is shown</li>
         </ul>
       </div>
